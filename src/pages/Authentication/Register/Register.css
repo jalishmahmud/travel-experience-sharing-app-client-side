@@ -1,0 +1,81 @@
+.register {
+  background-image: url("../../../images/login-page-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.register-form {
+  background-color: #fff;
+  padding: 3rem;
+  width: 450px;
+  margin: 4rem;
+  border-radius: 10px;
+  height: 560px;
+}
+.register-form h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.register-form span {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+  color: var(--text-grey);
+}
+.register-form a {
+  font-size: 16px;
+  display: inline-block;
+  color: var(--text-grey);
+  transition: color 300ms;
+}
+.register-form a:hover {
+  color: var(--main-color);
+}
+.register-form .input-field {
+  padding: 1rem 0.2rem;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  display: block;
+  margin-bottom: 1rem;
+  transition: all 300ms;
+  letter-spacing: 1px;
+}
+.input-field:focus {
+  outline: none;
+  border-bottom: 2px solid #ddd;
+  background-color: #fff;
+}
+.submit-button {
+  padding: 0.8rem;
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  margin-top: 1rem;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.submit-button.google-color {
+  background-color: #f05e65;
+  border-color: #f05e65;
+}
+.submit-button.google-color:hover {
+  background-color: #fff;
+  border-color: #f05e65;
+  color: #f05e65;
+}
+.submit-button:hover {
+  border: 1px solid var(--main-color);
+  background-color: #fff;
+  color: var(--main-color);
+}
