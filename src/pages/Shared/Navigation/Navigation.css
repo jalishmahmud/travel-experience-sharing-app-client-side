@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid var(--main-color);
+}
+.main-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.main-menu nav ul {
+  display: flex;
+}
+.main-menu nav ul li {
+  display: inline-block;
+  margin: 0.2rem 1rem;
+}
+.main-menu nav ul li:last-child {
+  display: inline-block;
+  margin: 0.2rem 0rem;
+}
+.main-menu nav ul li a {
+  display: block;
+  padding: 0.5rem 0rem;
+  font-size: 16px;
+  color: var(--text-grey);
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.main-menu nav ul li a:hover {
+  color: var(--main-color);
+}
+.main-menu nav ul li a.nav-button {
+  display: block;
+  background-color: var(--main-color);
+  padding: 0.5rem 1.3rem;
+  color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+.main-menu nav ul li a.nav-button:hover {
+  background-color: var(--hover-color);
+}

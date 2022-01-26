@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../pages/Authentication/firebase/firebase.init";
@@ -53,6 +54,16 @@ const useFirebase = () => {
       })
       .finally(() => setIsLoading(false));
   };
+  const logOut = () => {
+    setIsLoading(true);
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {})
+      .catch((error) => {
+        setAuthError(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
 
   // get currently signed user
   useEffect(() => {
@@ -74,6 +85,7 @@ const useFirebase = () => {
     googleSignIn,
     registerUser,
     loginUser,
+    logOut,
   };
 };
 

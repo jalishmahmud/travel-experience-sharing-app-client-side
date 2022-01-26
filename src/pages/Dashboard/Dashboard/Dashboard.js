@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-
+import "./Dashboard.css";
 const Dashboard = () => {
   const [activeClass, setActiveClass] = useState("Dashboard");
-  const { admin, user, signOutUser } = useAuth();
+  const { admin, user, logOut } = useAuth();
 
   const handleActiveClass = (menuName) => {
     setActiveClass(menuName);
@@ -102,7 +102,7 @@ const Dashboard = () => {
               </Link>
             </li>
             <li>
-              <Link onClick={signOutUser} to="/">
+              <Link onClick={logOut} to="/">
                 <span class="las la-sign-out-alt"></span> <span>Logout</span>
               </Link>
             </li>
@@ -110,7 +110,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div class="main-content">
-        <header>
+        <header className="dashboard">
           <h2>
             <label for="nav-toggle">
               <span class="las la-bars"></span>

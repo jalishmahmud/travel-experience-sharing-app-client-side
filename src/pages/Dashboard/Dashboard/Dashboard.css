@@ -18,6 +18,7 @@
 .sidebar-brand span {
   display: inline-block;
   padding-right: 1rem;
+  color: #fff;
 }
 .sidebar-menu li {
   width: 100%;
@@ -66,7 +67,7 @@
 #nav-toggle:checked ~ .main-content {
   margin-left: 70px;
 }
-#nav-toggle:checked ~ .main-content header {
+#nav-toggle:checked ~ .main-content header.dashboard {
   width: calc(100% - 70px);
   left: 70px;
 }
@@ -80,7 +81,7 @@
   transition: margin-left 300ms;
   margin-left: 345px;
 }
-header {
+header.dashboard {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -95,10 +96,10 @@ header {
 #nav-toggle {
   display: none;
 }
-header h2 {
+header.dashboard h2 {
   color: #222;
 }
-header label span {
+header.dashboard label span {
   font-size: 1.7rem;
   padding-right: 1rem;
   cursor: pointer;
@@ -186,17 +187,17 @@ main {
   background: #fff;
   border-radius: 5px;
 }
-.card-header,
+.card-header.dashboard,
 .card-body {
   padding: 1rem;
 }
-.card-header {
+.card-header.dashboard {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
 }
-.card-header button {
+.card-header.dashboard button {
   background-color: var(--main-color);
   border-radius: 10px;
   color: #fff;
@@ -293,7 +294,7 @@ tr td:last-child {
   .main-content {
     margin-left: 70px;
   }
-  .main-content header {
+  .main-content header.dashboard {
     width: calc(100% - 70px);
     left: 70px;
   }
@@ -343,12 +344,12 @@ tr td:last-child {
   .sidebar {
     left: -100% !important;
   }
-  header h2 {
+  header.dashboard h2 {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  header h2 label {
+  header.dashboard h2 label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,7 +366,7 @@ tr td:last-child {
     width: 100%;
     margin-left: 0rem;
   }
-  header {
+  header.dashboard {
     width: 100% !important;
     left: 0 !important;
   }
@@ -373,7 +374,7 @@ tr td:last-child {
     width: 100% !important;
     left: 0 !important;
   }
-  header h2 {
+  header.dashboard h2 {
     font-size: 1.1rem;
   }
   #nav-toggle:checked + .sidebar {

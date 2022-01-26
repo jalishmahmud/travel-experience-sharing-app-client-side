@@ -13,7 +13,8 @@ body {
 :root{
   --title-font: font-family: "Merriweather", serif;
   --main-color: #6933D9;
-  --color-grey: #999;
+  --hover-color: #4411b2;
+  --grey-color: #ccc;
   --text-color: #333;
   --title-color: #222;
 }
