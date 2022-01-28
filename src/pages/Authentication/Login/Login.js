@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import loader from "../../../images/loding.gif";
 import Navigation from "../../Shared/Navigation/Navigation";
 const Login = () => {
-  const { user, googleSignIn, isLoading } = useAuth();
+  const { googleSignIn, isLoading, loginUser } = useAuth();
   const [registerInfo, setRegisterInfo] = useState({});
+  const location = useLocation();
+  const navigate = useNavigate();
   const getInputFieldValue = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -13,12 +15,13 @@ const Login = () => {
     newRegisterInfo[field] = value;
     setRegisterInfo(newRegisterInfo);
   };
-  const handleRegister = (e) => {
+  const handleLogin = (e) => {
+    loginUser(registerInfo.email, registerInfo.password, location, navigate);
     console.log(registerInfo);
     e.preventDefault();
   };
   const handleGoogleSignIn = () => {
-    googleSignIn();
+    googleSignIn(location, navigate);
   };
   return (
     <>
@@ -30,7 +33,7 @@ const Login = () => {
             <span className="loader">
               {isLoading && <img width="30" src={loader} alt="" />}
             </span>
-            <form onSubmit={handleRegister}>
+            <form onSubmit={handleLogin}>
               <input
                 onBlur={getInputFieldValue}
                 className="input-field"

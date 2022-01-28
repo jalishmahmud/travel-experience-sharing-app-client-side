@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import loader from "../../../images/loding.gif";
 import Navigation from "../../Shared/Navigation/Navigation";
 import "./Register.css";
 const Register = () => {
-  const { user, googleSignIn, isLoading } = useAuth();
+  const { googleSignIn, isLoading, registerUser } = useAuth();
   const [registerInfo, setRegisterInfo] = useState({});
+  const location = useLocation();
+  const navigate = useNavigate();
   const getInputFieldValue = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -15,11 +17,17 @@ const Register = () => {
     setRegisterInfo(newRegisterInfo);
   };
   const handleRegister = (e) => {
-    console.log(registerInfo);
+    registerUser(
+      registerInfo.email,
+      registerInfo.password,
+      registerInfo.name,
+      location,
+      navigate
+    );
     e.preventDefault();
   };
   const handleGoogleSignIn = () => {
-    googleSignIn();
+    googleSignIn(location, navigate);
   };
   return (
     <>
