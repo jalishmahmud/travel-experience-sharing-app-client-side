@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .main-area {
   width: 80%;
   display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 67% auto;
   grid-gap: 40px;
 }
 .main-area img {

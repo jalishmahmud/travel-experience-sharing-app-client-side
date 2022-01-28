@@ -1,0 +1,41 @@
+.slide-container {
+  width: 80% !important;
+  margin: 0 auto;
+  padding: 1.2rem 0.6rem;
+  box-shadow: 10px 5px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.react-slideshow-container {
+  padding: 0 !important;
+  width: 100% !important;
+}
+.each-slide > div {
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.react-slideshow-container svg {
+  fill: goldenrod;
+}
+.react-slideshow-container button {
+  width: 40px !important;
+  height: 40px !important;
+  position: relative;
+}
+.react-slideshow-container button:first-child {
+  left: 2rem;
+}
+.react-slideshow-container button:last-child {
+  right: 2rem;
+}
+@media only screen and (max-width: 700px) {
+  .each-slide > div {
+    height: 300px;
+  }
+}

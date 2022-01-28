@@ -1,0 +1,14 @@
+footer {
+  background-color: var(--grey-color);
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  display: inline-block;
+  margin: 0 2rem;
+}
