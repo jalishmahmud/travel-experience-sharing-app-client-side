@@ -20,6 +20,9 @@ const Navigation = () => {
               <Link to="">About</Link>
             </li>
             <li>
+              <Link to="">Contact</Link>
+            </li>
+            <li>
               <Link className="nav-button" to="/dashboard">
                 Dashboard
               </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import article1 from "../../../images/article-1.jpg";
 import user from "../../../images/user.png";
 import "./Experiences.css";
@@ -10,7 +11,9 @@ const Experiences = () => {
           <article>
             <div className="experience-single">
               <img src={article1} alt="" />
-              <h3>It was an amazing tour at Sylhet</h3>
+              <h3>
+                <Link to="">It was an amazing tour at Sylhet</Link>
+              </h3>
               <div className="tour-info">
                 <small>
                   <span className="las la-wallet"></span>

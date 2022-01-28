@@ -17,7 +17,7 @@ const Dashboard = () => {
         <div class="sidebar-brand">
           <h2>
             <span class="lab la-accusoft"></span>
-            <span>MathDataSci</span>
+            <span>Travel Experience</span>
           </h2>
         </div>
         <div class="sidebar-menu">
@@ -33,67 +33,48 @@ const Dashboard = () => {
             </li>
             <li>
               <Link
-                to="/dashboard/myCourse"
-                class={activeClass === "myCourse" ? "active" : ""}
-                onClick={() => handleActiveClass("myCourse")}
+                to="/dashboard/add-new-post"
+                class={activeClass === "addNewPost" ? "active" : ""}
+                onClick={() => handleActiveClass("addNewPost")}
               >
-                <span class="las la-users"></span> <span>My Course</span>
+                <span class="las la-plus-circle"></span>{" "}
+                <span>Add New Post</span>
               </Link>
             </li>
             <li>
               <Link
-                to="#"
-                class={activeClass === "Students" ? "active" : ""}
-                onClick={() => handleActiveClass("Students")}
+                to="/dashboard/all-posts"
+                class={activeClass === "allPosts" ? "active" : ""}
+                onClick={() => handleActiveClass("allPosts")}
               >
-                <span class="las la-users"></span> <span>Students</span>
+                <span class="las la-layer-group"></span> <span>All Posts</span>
               </Link>
             </li>
             <li>
               <Link
-                to="#"
-                class={activeClass === "Projects" ? "active" : ""}
-                onClick={() => handleActiveClass("Projects")}
+                to="/dashboard/user-comments"
+                class={activeClass === "userComments" ? "active" : ""}
+                onClick={() => handleActiveClass("userComments")}
               >
-                <span class="las la-clipboard-list"></span>
-                <span>Projects</span>
+                <span class="las la-comments"></span> <span>User Comments</span>
               </Link>
             </li>
             <li>
               <Link
-                to="/dashboard/allEnrolledCourses"
-                class={activeClass === "allEnrolled" ? "active" : ""}
-                onClick={() => handleActiveClass("allEnrolled")}
+                to="/dashboard/all-users"
+                class={activeClass === "allUsers" ? "active" : ""}
+                onClick={() => handleActiveClass("allUsers")}
               >
-                <span class="las la-shopping-bag"></span>{" "}
-                <span>All Enrolled</span>
+                <span class="las la-users"></span> <span>All Users</span>
               </Link>
             </li>
             <li>
               <Link
-                to="/dashboard/makeAdmin"
+                to="/dashboard/make-admin"
                 class={activeClass === "makeAdmin" ? "active" : ""}
                 onClick={() => handleActiveClass("makeAdmin")}
               >
                 <span class="las la-user-circle"></span> <span>Make Admin</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                class={activeClass === "Instructor" ? "active" : ""}
-                onClick={() => handleActiveClass("Instructor")}
-              >
-                <span class="las la-receipt"></span> <span>Instructor</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                class={activeClass === "Task" ? "active" : ""}
-                onClick={() => handleActiveClass("Task")}
-              >
-                <span class="las la-clipboard-list"></span> <span>Task</span>
               </Link>
             </li>
             <li>
@@ -125,7 +106,7 @@ const Dashboard = () => {
             <img src={user.photoURL} alt="" width="30px" height="30px" />
             <div>
               <h4>{user && user.displayName}</h4>
-              {admin ? <small>Super Admin</small> : <span>Student</span>}
+              {admin ? <small>Super Admin</small> : <span>General User</span>}
             </div>
           </div>
         </header>

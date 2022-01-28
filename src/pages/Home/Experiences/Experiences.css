@@ -5,7 +5,6 @@
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
 .main-area {
   width: 80%;
   display: grid;
@@ -28,11 +27,17 @@
   box-shadow: 10px 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
-.experience-single h3 {
+.experience-single h3 a {
+  display: inline-block;
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 2rem;
   color: var(--title-color);
+  transition: all 0.3s;
+  margin: 0.4rem 0;
+}
+.experience-single h3 a:hover {
+  color: var(--hover-color);
 }
 .experience-single .tour-info {
   display: flex;

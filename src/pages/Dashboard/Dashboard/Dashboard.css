@@ -227,18 +227,37 @@ td .status {
   border-radius: 50%;
   margin-right: 1rem;
 }
-tr td:last-child {
+tr td:nth-child(2) {
   display: flex;
   align-items: center;
 }
-.status.purple {
-  background-color: rebeccapurple;
+tr td:last-child {
+  width: 34.9%;
 }
-.status.pink {
-  background-color: deeppink;
+tr td:last-child button {
+  display: inline-block;
+  margin-right: 0.5rem;
+  background-color: var(--main-color);
+  border: none;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
-.status.orange {
-  background-color: orangered;
+tr td:last-child button:hover {
+  background-color: var(--hover-color);
+}
+.purple {
+  background-color: rebeccapurple !important;
+}
+.pink {
+  background-color: deeppink !important;
+}
+.orange {
+  background-color: orangered !important;
 }
 .table-responsive {
   width: 100%;
