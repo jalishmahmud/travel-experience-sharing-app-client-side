@@ -12,11 +12,11 @@ body {
 
 :root{
   --title-font: font-family: "Merriweather", serif;
-  --main-color: #6933D9;
-  --hover-color: #4411b2;
+  --main-color: #019CD5;
+  --hover-color: #018abc;
   --grey-color: #ccc;
   --text-color: #333;
-  --title-color: #222;
+  --title-color: #444;
 }
 
 h1, h2, h3, h4, h5, h6{

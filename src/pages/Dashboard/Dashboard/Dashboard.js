@@ -129,7 +129,7 @@ const Dashboard = () => {
             </div>
           </div>
         </header>
-        <main>
+        <main className="dashboard">
           <Outlet />
         </main>
       </div>

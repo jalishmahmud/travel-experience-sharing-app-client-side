@@ -23,7 +23,7 @@
 }
 .register-form span.loader {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 15px);
   top: 2.1rem;
 }
 .register-form h3 {
@@ -82,12 +82,11 @@
   border-color: #f05e65;
 }
 .submit-button.google-color:hover {
-  background-color: #fff;
+  background-color: #e81e00;
   border-color: #f05e65;
-  color: #f05e65;
+  color: #fff;
 }
 .submit-button:hover {
   border: 1px solid var(--main-color);
-  background-color: #fff;
-  color: var(--main-color);
+  background-color: var(--hover-color);
 }
